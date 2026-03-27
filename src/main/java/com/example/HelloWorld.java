@@ -31,7 +31,7 @@ public class HelloWorld {
         if (nameInput instanceof String name) {
             var stripped = name.strip();
             var recipient = stripped.isBlank() ? "World" : stripped;
-            return new Greeting(recipient, greet(name));
+            return new Greeting(recipient, greet(recipient));
         }
         return new Greeting("World", greet("World"));
     }

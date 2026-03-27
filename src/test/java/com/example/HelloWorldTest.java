@@ -54,6 +54,15 @@ class HelloWorldTest {
     }
 
     @Test
+    void testBuildGreetingStripsWhitespace() {
+        // recipient and message must both use the stripped name (not the raw input)
+        var greeting = HelloWorld.buildGreeting("  Alice  ");
+        assertNotNull(greeting);
+        assertEquals("Alice", greeting.recipient());
+        assertEquals("Hello, Alice!", greeting.message());
+    }
+
+    @Test
     void testBuildGreetingWithNonString() {
         var greeting = HelloWorld.buildGreeting(42);
         assertNotNull(greeting);
