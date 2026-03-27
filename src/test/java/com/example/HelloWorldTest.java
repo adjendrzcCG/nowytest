@@ -1,17 +1,32 @@
 package com.example;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
 
-public class HelloWorldTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class HelloWorldTest {
 
     @Test
-    public void testGreet() {
+    void testGreet() {
         assertEquals("Hello, World!", HelloWorld.greet("World"));
     }
 
     @Test
-    public void testGreetWithCustomName() {
+    void testGreetWithCustomName() {
         assertEquals("Hello, Java!", HelloWorld.greet("Java"));
+    }
+
+    @Test
+    void testGreetReturnsNonNull() {
+        assertNotNull(HelloWorld.greet("Test"));
+    }
+
+    @Test
+    void testGreetContainsName() {
+        var name = "Alice";
+        var result = HelloWorld.greet(name);
+        assertTrue(result.contains(name), "Greeting should contain the provided name");
     }
 }
