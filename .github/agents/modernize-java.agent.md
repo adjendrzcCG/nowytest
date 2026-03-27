@@ -14,4 +14,3 @@ mcp-servers:
       APPMOD_CALLER_TYPE: copilot-cli
 ---
 
-upgrade this java app to the latest java version and update all dependencies to their latest versions. Refactor any deprecated code patterns to modern equivalents. Provide a detailed modernization report outlining the changes made, including Java version updates, dependency upgrades, and code refactoring details.
