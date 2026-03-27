@@ -29,8 +29,9 @@ public class HelloWorld {
     public static Greeting buildGreeting(Object nameInput) {
         // instanceof pattern matching (Java 16+)
         if (nameInput instanceof String name) {
-            var message = greet(name);
-            return new Greeting(name.strip().isBlank() ? "World" : name.strip(), message);
+            var stripped = name.strip();
+            var recipient = stripped.isBlank() ? "World" : stripped;
+            return new Greeting(recipient, greet(name));
         }
         return new Greeting("World", greet("World"));
     }

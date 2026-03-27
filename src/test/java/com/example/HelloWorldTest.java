@@ -41,7 +41,8 @@ class HelloWorldTest {
         "Charlie | Hello, Charlie!"
     })
     void testGreetParameterized(String name, String expected) {
-        assertEquals(expected.strip(), HelloWorld.greet(name.strip()));
+        // CSV values are trimmed by @CsvSource; names have no surrounding whitespace
+        assertEquals(expected, HelloWorld.greet(name));
     }
 
     @Test
