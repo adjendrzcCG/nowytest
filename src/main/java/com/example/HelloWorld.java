@@ -7,6 +7,10 @@ public class HelloWorld {
     }
 
     public static void main(String[] args) {
-        System.out.println(greet("World"));
+        String message = """
+                Welcome to the Java 17 App!
+                %s
+                """.formatted(greet("World"));
+        System.out.println(message);
     }
 }
