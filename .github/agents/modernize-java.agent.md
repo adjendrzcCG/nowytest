@@ -14,3 +14,4 @@ mcp-servers:
       APPMOD_CALLER_TYPE: copilot-cli
 ---
 
+upgrade to java 17
