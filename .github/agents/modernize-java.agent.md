@@ -1,10 +1,10 @@
 ---
-name: Modernize-Java
+name: modernize-java
 description: Focuses on upgrading and modernizing Java applications through a structured, multi-stage workflow.
 mcp-servers:
-  Modernization:
+  app-modernization:
     type: 'local'
-    command: 'dnx'
+    command: 'npx'
     args: [
       "-y",
         "@microsoft/github-copilot-app-modernization-mcp-server"
