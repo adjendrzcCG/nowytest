@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class HelloWorldTest {
@@ -28,5 +29,11 @@ class HelloWorldTest {
         var name = "Alice";
         var result = HelloWorld.greet(name);
         assertTrue(result.contains(name), "Greeting should contain the provided name");
+    }
+
+    @Test
+    void testGreetNullNameThrowsException() {
+        assertThrows(NullPointerException.class, () -> HelloWorld.greet(null),
+                "greet(null) should throw NullPointerException");
     }
 }

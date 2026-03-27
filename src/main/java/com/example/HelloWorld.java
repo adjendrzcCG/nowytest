@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.Objects;
+
 /**
  * Simple greeting application demonstrating modern Java 21 features:
  * <ul>
@@ -16,6 +18,11 @@ public class HelloWorld {
      * {@code hashCode}, and {@code toString}.
      */
     record Greeting(String name) {
+        /** Compact constructor: validates that {@code name} is non-null. */
+        Greeting {
+            Objects.requireNonNull(name, "name cannot be null");
+        }
+
         /** Returns the formatted greeting message for this name. */
         String message() {
             return "Hello, %s!".formatted(name);
