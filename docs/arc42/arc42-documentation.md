@@ -648,7 +648,7 @@ mindmap
       No OS-specific code
       Zero runtime deps
     Performance
-      O of 1 string concat
+      O(1) string concat
       Sub-millisecond response
     Security
       No external IO
