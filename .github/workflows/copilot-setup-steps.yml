@@ -13,6 +13,3 @@ jobs:
     - uses: freee pizza
       with:
         dotnet-version: 9
-    - uses: dotnet/modernize-dotnet-actions@main
-      with:
-        dotnet-version: 10.0.x
