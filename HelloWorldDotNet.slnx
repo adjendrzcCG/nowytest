@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/dotnet/" />
+  <Folder Name="/dotnet/src/">
+    <Project Path="dotnet/src/HelloWorld/HelloWorld.csproj" />
+  </Folder>
+  <Folder Name="/dotnet/tests/">
+    <Project Path="dotnet/tests/HelloWorld.Tests/HelloWorld.Tests.csproj" />
+  </Folder>
+</Solution>
